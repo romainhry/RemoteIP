@@ -1,0 +1,21 @@
+module ViewerApp
+{
+  interface Viewer
+  {
+  typedef sequence<octet> byteArray;
+  byteArray view();
+  void mouseMove(in long x, in long y);
+  void mouseClick();
+  void mousePress();
+  void mouseRelease();
+
+  void mouseRightClick();
+  void mouseRightPress();
+  void mouseRightRelease();
+
+  void keyPress(in long code);
+  void keyClick(in long code);
+  void keyRelease(in long code);
+  oneway void shutdown();
+  };
+};
